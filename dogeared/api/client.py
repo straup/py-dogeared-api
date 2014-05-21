@@ -59,15 +59,15 @@ if __name__ == '__main__':
     # sudo make me read a config file...
 
     parser.add_option('--access-token', dest='access_token',
-                        help='Your Flamework API access token',
+                        help='Your dogeared-www API access token',
                         action='store')
 
     parser.add_option('--host', dest='host',
-                        help='Your Flamework API host',
+                        help='Your dogeared-www API host',
                         action='store')
 
     parser.add_option('--endpoint', dest='endpoint',
-                        help='Your Flamework API endpoint',
+                        help='Your dogeared-www API endpoint',
                         action='store')
 
     parser.add_option("-v", "--verbose", dest="verbose",

@@ -1,5 +1,7 @@
 # py-dogeared-api
 
+Python bindings for the dogeared-www API
+
 ## Example
 
 	from doegared.api.client import OAuth2
@@ -14,10 +16,6 @@
 
 	rsp = api.execute_method(method, args)
 	print rsp
-
-## TO DO
-
-* A proper `setup.py` file
 
 ## See also
 
