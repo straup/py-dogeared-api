@@ -26,7 +26,7 @@ class OAuth2:
 
         (headers, body) = encode(kwargs)
 
-        url = self.endpoint + '/' + method
+        url = self.endpoint
         logging.debug("calling %s" % url)
 
         conn = httplib.HTTPSConnection(self.hostname)
@@ -81,8 +81,9 @@ if __name__ == '__main__':
     else:
         logging.basicConfig(level=logging.INFO)
 
-    api = OAuth2(options.access_token)
+    api = OAuth2(options.access_token, hostname=options.host, endpoint=options.endpoint)
 
-    # Sample API call goes here
+    rsp = api.execute_method('api.test.echo', {'text': 'hello world'})
+    print rsp
 
     sys.exit()
